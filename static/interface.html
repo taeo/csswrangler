@@ -1,0 +1,41 @@
+<div id="cssWranglerUI">
+	<div id="cssWranglerContentWrap" style="display:none;">
+		<div id="cssWranglerContent" class="cssWranglerClearfix">
+			<div id="cssWranglerLeft">
+				<h2>CSS Wrangler</h2>
+				<p>This will allow you to refresh your css or override css from a local source file. To learn more visit our website at <a id="cssWranglerLink" href="http://www.csswrangler.com">csswrangler.com</a>.
+				</p>
+				<div class="cssWranglerSavePreferences">
+					<a href="javascript:void(0);" id="cssWranglerSavePreferences">Save &amp; Refresh</a>
+				</div>
+			</div><!--! #cssWranglerLeft -->
+			<div id="cssWranglerRight">
+				<ul id="cssWranglerOptionsNav" class="cssWranglerClearfix">
+					<li><a href="javascript:void(0);" data-target="#cssWranglerRemoteFiles">Remote Files</a></li>
+					<li><a href="javascript:void(0);" data-target="#cssWranglerLocalFiles">Local Files</a></li>
+					<li><a href="javascript:void(0);" data-target="#cssWranglerDirectInput">Direct Input</a></li>
+				</ul>
+				<div id="cssWranglerRemoteFiles" class="cssWranglerOptionGroup">
+					<h3>Server-side file options</h3>
+					<p>Check the files you would like refreshed. Unchecked file paths will not be reloaded.</p>
+				</div><!--! #cssWranglerRemoteFiles -->
+				<div id="cssWranglerLocalFiles" class="cssWranglerOptionGroup cssWranglerHidden">
+					<h3>Attach locally hosted files</h3>
+					<p>Put the full path to each locally or externally hosted stylesheet below <em>(Each one on a new line)</em>.</p>
+					<textarea name="cssWranglerLocalFilesCode" id="cssWranglerLocalFilesCode"></textarea>
+				</div><!--! #cssWranglerLocalFiles -->
+				<div id="cssWranglerDirectInput" class="cssWranglerOptionGroup cssWranglerHidden">
+					<h3>Paste your own code</h3>
+					<p>Write any css below. It will be included right before the closing <code>&lt;/head&gt;</code> tag.</p>
+					<textarea name="cssWranglerDirectInputCode" id="cssWranglerDirectInputCode"></textarea>
+				</div><!--! #cssWranglerDirectInput -->
+			</div><!--! #cssWranglerRight -->
+			
+			<br style="clear:both;" />
+		</div><!--! #cssWranglerContent -->
+	</div><!--! #cssWranglerContentWrap -->
+	<div id="cssWranglerTabs">
+		<a href="javascript:void(0);" id="cssWranglerTabOptions">Options Tab</a>
+		<a href="javascript:void(0);" id="cssWranglerTabRefresh">Refresh</a>
+	</div><!--! #cssWranglerTabs -->
+</div><!--! #cssWranglerUI -->

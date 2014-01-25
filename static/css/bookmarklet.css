@@ -1,0 +1,361 @@
+/*---------------------------------------------------
+    LESS Prefixer
+  ---------------------------------------------------
+    
+    All of the CSS3 fun, none of the prefixes!
+
+    As a rule, you can use the CSS properties you
+    would expect just by adding a '.':
+
+    box-shadow => .box-shadow(@args)
+
+    Also, when shorthand is available, arguments are
+    not parameterized. Learn CSS, not LESS Prefixer.
+
+    -------------------------------------------------
+    TABLE OF CONTENTS
+    (*) denotes a syntax-sugar helper
+    -------------------------------------------------
+
+        .animation(@args)
+            .animation-delay(@delay)
+            .animation-direction(@direction)
+            .animation-duration(@duration)
+            .animation-iteration-count(@count)
+            .animation-name(@name)
+            .animation-play-state(@state)
+            .animation-timing-function(@function)
+        .background-size(@args)
+        .border-radius(@args)
+        .box-shadow(@args)
+            .inner-shadow(@args) *
+        .box-sizing(@args)
+            .border-box() *
+            .content-box() *
+        .columns(@args)
+            .column-count(@count)
+            .column-gap(@gap)
+            .column-rule(@args)
+            .column-width(@width)
+        .gradient(@default,@start,@stop) *
+            .linear-gradient-top(@default,@color1,@stop1,@color2,@stop2,[@color3,@stop3,@color4,@stop4])*
+            .linear-gradient-left(@default,@color1,@stop1,@color2,@stop2,[@color3,@stop3,@color4,@stop4])*
+        .opacity(@factor)
+        .transform(@args)
+            .rotate(@deg)
+            .scale(@factor)
+            .translate(@x,@y)
+            .translate3d(@x,@y,@z)
+            .translateHardware(@x,@y) *
+        .text-shadow(@args)
+        .transition(@args)
+            .transition-delay(@delay)
+            .transition-duration(@duration)
+            .transition-property(@property)
+            .transition-timing-function(@function)
+
+
+
+    Credit to LESS Elements for the motivation and
+    to CSS3Please.com for implementation.
+
+    Copyright (c) 2012 Joel Sutherland
+    MIT Licensed:
+    http://www.opensource.org/licenses/mit-license.php
+
+-----------------------------------------------------*/
+/* Animation */
+/* Background Size */
+/* Border Radius */
+/* Box Shadows */
+/* Box Sizing */
+/* Columns */
+/* Gradients */
+/* Opacity */
+/* Text Shadow */
+/* Transforms */
+/* Transitions */
+#cssWranglerUI {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 300000;
+  text-align: left;
+  /*
+	#cssWranglerLocalFiles,
+	#cssWranglerLocalFiles {
+		float:left;
+		width:300px;
+	}
+	*/
+
+}
+#cssWranglerUI h1,
+#cssWranglerUI h2,
+#cssWranglerUI h3,
+#cssWranglerUI h4,
+#cssWranglerUI h5,
+#cssWranglerUI h6,
+#cssWranglerUI p,
+#cssWranglerUI form,
+#cssWranglerUI input,
+#cssWranglerUI textarea,
+#cssWranglerUI ul,
+#cssWranglerUI ol,
+#cssWranglerUI li {
+  margin: 0;
+  padding: 0;
+}
+#cssWranglerUI #cssWranglerContentWrap {
+  display: none;
+  background-color: #fff;
+  padding: 20px;
+  position: relative;
+  z-index: 295000;
+  -webkit-box-shadow: 0 0 10px #666666;
+  -moz-box-shadow: 0 0 10px #666666;
+  box-shadow: 0 0 10px #666666;
+}
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent {
+  color: #666666 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
+  width: 100%;
+}
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent * {
+  background-image: none;
+  border: none;
+}
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent p {
+  color: #666666 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent h1,
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent h2,
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent h3,
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent h4 {
+  color: #333333 !important;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif !important;
+  font-weight: bold !important;
+  line-height: 1 !important;
+}
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent h2 {
+  font-size: 26px;
+  font-weight: bold;
+  padding: 0 0 6px 0;
+}
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent h3 {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 0 4px 0;
+}
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent p {
+  margin-bottom: 14px;
+}
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent a {
+  color: #0088cc !important;
+  text-decoration: none !important;
+}
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent a:hover {
+  color: #999999 !important;
+  text-decoration: none !important;
+}
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent ul,
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent li {
+  background: none;
+}
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent #cssWranglerLeft {
+  float: left;
+  width: 20%;
+}
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent #cssWranglerRight {
+  float: right;
+  width: 70%;
+}
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent #cssWranglerRight .cssWranglerOptionGroup {
+  overflow: auto;
+  max-height: 300px;
+}
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent #cssWranglerOptionsNav {
+  list-style-type: none;
+  margin-bottom: 14px;
+}
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent #cssWranglerOptionsNav li {
+  float: left;
+  padding-right: 20px;
+}
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent #cssWranglerOptionsNav li a {
+  color: #fff !important;
+  display: block;
+  line-height: 24px !important;
+  font-weight: bold !important;
+  padding: 0 10px !important;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-color: #0088cc;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00aaff), color-stop(100% #0088cc));
+  background-image: -webkit-linear-gradient(top, #00aaff 0%, #0088cc 100%);
+  background-image: -moz-linear-gradient(top, #00aaff 0%, #0088cc 100%);
+  background-image: -ms-linear-gradient(top, #00aaff 0%, #0088cc 100%);
+  background-image: -o-linear-gradient(top, #00aaff 0%, #0088cc 100%);
+  background-image: linear-gradient(top, #00aaff 0%, #0088cc 100%);
+  text-shadow: 0 -1px 0 #006699;
+  -webkit-transition: background 0.25s linear;
+  -moz-transition: background 0.25s linear;
+  -o-transition: background 0.25s linear;
+  transition: background 0.25s linear;
+}
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent #cssWranglerOptionsNav li a:hover {
+  background-color: #0099e6;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1ab2ff), color-stop(100% #0099e6));
+  background-image: -webkit-linear-gradient(top, #1ab2ff 0%, #0099e6 100%);
+  background-image: -moz-linear-gradient(top, #1ab2ff 0%, #0099e6 100%);
+  background-image: -ms-linear-gradient(top, #1ab2ff 0%, #0099e6 100%);
+  background-image: -o-linear-gradient(top, #1ab2ff 0%, #0099e6 100%);
+  background-image: linear-gradient(top, #1ab2ff 0%, #0099e6 100%);
+  text-shadow: 0 -1px 0 #0088cc;
+}
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent #cssWranglerOptionsNav li a.cssWranglerOptionActive,
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent #cssWranglerOptionsNav li a.cssWranglerOptionActive:hover {
+  background-color: #999999;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b3b3b3), color-stop(100% #999999));
+  background-image: -webkit-linear-gradient(top, #b3b3b3 0%, #999999 100%);
+  background-image: -moz-linear-gradient(top, #b3b3b3 0%, #999999 100%);
+  background-image: -ms-linear-gradient(top, #b3b3b3 0%, #999999 100%);
+  background-image: -o-linear-gradient(top, #b3b3b3 0%, #999999 100%);
+  background-image: linear-gradient(top, #b3b3b3 0%, #999999 100%);
+  text-shadow: 0 -1px 0 #808080;
+}
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent .cssWranglerOptionGroup textarea {
+  background-color: #fff !important;
+  border: 1px solid #ccc !important;
+  font-family: Courier, "Courier New", Times, serif !important;
+  font-size: 13px !important;
+  min-height: 200px;
+  padding: 10px !important;
+  width: 90% !important;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent .cssWranglerHidden {
+  display: none;
+}
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent .cssWranglerClearfix {
+  zoom: 1;
+}
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent .cssWranglerClearfix:before,
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent .cssWranglerClearfix:after {
+  content: "";
+  display: table;
+}
+#cssWranglerUI #cssWranglerContentWrap #cssWranglerContent .cssWranglerClearfix:after {
+  clear: both;
+}
+#cssWranglerUI #cssWranglerTabs {
+  border: none !important;
+  float: right !important;
+  margin: -14px 20px 0 0 !important;
+  text-align: right;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 4px 4px #666666;
+  -moz-box-shadow: 0 4px 4px #666666;
+  box-shadow: 0 4px 4px #666666;
+  background-color: #999999;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #666666), color-stop(100% #999999));
+  background-image: -webkit-linear-gradient(top, #666666 0%, #999999 100%);
+  background-image: -moz-linear-gradient(top, #666666 0%, #999999 100%);
+  background-image: -ms-linear-gradient(top, #666666 0%, #999999 100%);
+  background-image: -o-linear-gradient(top, #666666 0%, #999999 100%);
+  background-image: linear-gradient(top, #666666 0%, #999999 100%);
+}
+#cssWranglerUI #cssWranglerTabs a {
+  cursor: pointer;
+  color: #fff !important;
+  float: left;
+  font-size: 13px !important;
+  font-weight: bold !important;
+  line-height: 1 !important;
+  padding: 24px 14px 10px 14px !important;
+  white-space: nowrap !important;
+  text-shadow: 0 -1px 0 #333333;
+}
+#cssWranglerUI #cssWranglerTabs a:hover {
+  background-color: #aaaaaa;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #555555), color-stop(100% #aaaaaa));
+  background-image: -webkit-linear-gradient(top, #555555 0%, #aaaaaa 100%);
+  background-image: -moz-linear-gradient(top, #555555 0%, #aaaaaa 100%);
+  background-image: -ms-linear-gradient(top, #555555 0%, #aaaaaa 100%);
+  background-image: -o-linear-gradient(top, #555555 0%, #aaaaaa 100%);
+  background-image: linear-gradient(top, #555555 0%, #aaaaaa 100%);
+}
+#cssWranglerUI #cssWranglerTabs a#cssWranglerTabOptions {
+  border-right: 1px solid #666 !important;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 14px;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 14px;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 14px;
+  border-top-left-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+#cssWranglerUI #cssWranglerTabs a#cssWranglerTabRefresh {
+  border-left: 1px solid #999 !important;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 14px;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 14px;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 14px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+#cssWranglerUI .cssWranglerRemoteSheetUrl {
+  font-size: 11px !important;
+  margin-bottom: 4px;
+}
+#cssWranglerUI .cssWranglerRemoteSheetUrl label {
+  background-color: #efefef !important;
+  display: inline-block !important;
+  padding: 4px 8px 4px 8px !important;
+  margin-bottom: 4px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+#cssWranglerUI .cssWranglerRemoteSheetUrl label input {
+  display: inline-block !important;
+  margin: 0 8px 0 0 !important;
+}

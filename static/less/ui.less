@@ -1,0 +1,233 @@
+#cssWranglerUI {
+	position:fixed;
+	right:0;
+	top:0;
+	width:100%;
+	z-index:300000;
+
+	text-align:left;
+
+	// Set some defaults to help preserve our styling (as best we can)
+	h1,h2,h3,h4,h5,h6,p,form,input,textarea,ul,ol,li {
+		margin:0;
+		padding:0;
+	}
+
+	#cssWranglerContentWrap {
+
+		display:none;
+		background-color:#fff;
+		padding:20px;
+		position: relative;
+    	z-index: 295000;
+		.box-shadow(0 0 10px #666);
+		
+		#cssWranglerContent {
+
+			* {
+				background-image:none;
+				border:none;
+			}
+
+			color:@bodyColor !important;
+			font-family:@baseFontFamily !important;
+			font-size:13px !important;
+			line-height:18px !important;
+			width:100%;
+
+			p {
+				color:@bodyColor !important;
+				font-family:@baseFontFamily !important;
+				//font-size:13px !important;
+				//line-height:18px !important;
+			}
+			
+			h1,h2,h3,h4 {
+				color:@headlineColor !important;
+				font-family:@altFontFamily !important;
+				font-weight:bold !important;
+				line-height:1 !important;
+			}
+			h2 {
+				font-size:26px;
+				font-weight:bold;
+				padding:0 0 6px 0;
+			}
+			h3 {
+				font-size:16px;
+				font-weight:bold;
+				padding:0 0 4px 0;
+			}
+			p {
+				margin-bottom:14px;
+			}
+			a {
+				color:@linkColor !important;
+				text-decoration:none !important;
+
+				&:hover {
+					color:@linkColorHover !important;
+					text-decoration:none !important;
+				}
+
+			}
+			ul, li {
+				background:none;
+			}
+
+			#cssWranglerLeft {
+				float:left;
+				width:20%;
+			}
+
+			#cssWranglerRight {
+				float:right;
+				width:70%;
+
+				.cssWranglerOptionGroup {
+					overflow: auto;
+					max-height:300px;
+				}
+			}
+
+			// Option Group Nav
+			#cssWranglerOptionsNav {
+				list-style-type:none;
+				margin-bottom:14px;
+
+				li {
+					float:left;
+					padding-right:20px;
+
+					a {
+						color:#fff !important;
+						display:block;
+						line-height:24px !important;
+						font-weight:bold !important;
+						padding:0 10px !important;
+						.border-radius(20px);
+						.gradient(@linkColor, lighten(@linkColor, 10%), @linkColor);
+						.text-shadow(0 -1px 0 darken(@linkColor, 10%));
+						.transition(background 0.25s linear);
+
+						&:hover {
+							.gradient(lighten(@linkColor, 5%), lighten(@linkColor, 15%), lighten(@linkColor, 5%));
+							.text-shadow(0 -1px 0 @linkColor);
+						}
+
+						&.cssWranglerOptionActive,
+						&.cssWranglerOptionActive:hover {
+							//color:#333 !important;
+							.gradient(#999, lighten(#999, 10%), #999);
+							.text-shadow(0 -1px 0 darken(#999, 10%));
+						}
+					}
+				}
+			}
+
+			// Option Group Specific
+			.cssWranglerOptionGroup {
+
+				textarea {
+					background-color:#fff !important;
+					border:1px solid #ccc !important;
+					font-family:Courier, "Courier New", Times, serif !important;
+					font-size:13px !important;
+					min-height:200px;
+					padding:10px !important;
+					width:90% !important;
+
+					.border-radius(5px);
+				}
+
+			}
+
+			// Helper Utilities
+			.cssWranglerHidden {
+				display: none;
+			}
+
+    		.cssWranglerClearfix {
+    			
+    			zoom: 1;
+
+    			&:before, 
+    			&:after { 
+    				content: ""; 
+    				display: table;
+    			}
+    			&:after {
+    				clear: both; 
+    			}
+    		}
+		}
+	}
+
+	// Tabs
+	#cssWranglerTabs {
+		border:none !important;
+		//background-color:#fff !important;
+		float:right !important;
+		margin:-14px 20px 0 0 !important;
+		text-align:right;
+
+		.border-radius(14px);
+		.box-shadow(0 4px 4px #666);
+		.gradient(#999, #666, #999);
+	
+		a {
+			
+			cursor:pointer;
+
+			color:#fff !important;
+			float:left;
+			font-size:13px !important;
+			font-weight:bold !important;
+			line-height:1 !important;
+			padding:24px 14px 10px 14px !important;
+			white-space:nowrap !important;
+			.text-shadow(0 -1px 0 #333);
+
+			&:hover {
+				.gradient(#aaa, #555, #aaa);
+			}
+
+			&#cssWranglerTabOptions {
+				border-right:1px solid #666 !important;
+				.border-radiuses(0,0,14px,0);
+			}
+
+			&#cssWranglerTabRefresh {
+				border-left:1px solid #999 !important;
+				.border-radiuses(0,14px,0,0);
+			}
+
+		}
+	}
+
+	/*
+	#cssWranglerLocalFiles,
+	#cssWranglerLocalFiles {
+		float:left;
+		width:300px;
+	}
+	*/
+
+	.cssWranglerRemoteSheetUrl {
+		font-size:11px !important;
+		margin-bottom:4px;
+		
+		label {
+			background-color:#efefef !important;
+			display:inline-block !important;
+			padding:4px 8px 4px 8px !important;
+			margin-bottom:4px;
+			.border-radius(3px);
+
+			input {
+				display:inline-block !important;
+				margin:0 8px 0 0 !important;
+			}
+		}
+	}
+}	
