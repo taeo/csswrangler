@@ -7,5 +7,6 @@ A very old idea I decided to rekindle and take from it's current, loosely workin
 
 ## Usage
 1. Go to [http://csswrangler.dev](http://csswrangler.dev)
-2. Drag the link into your bookmarks.
-3. Have fun.
+2. Drag the link into your bookmarks
+3. It won't work on https sites at the moment
+4. Have fun
